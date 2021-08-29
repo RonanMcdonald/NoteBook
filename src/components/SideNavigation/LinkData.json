@@ -1,0 +1,39 @@
+{
+  "QuickLinks": [
+    { 
+      "linkName": "All Notes", 
+      "iconLocation": "", 
+      "href": "exampleHref" 
+    }, 
+    { 
+      "linkName": "Reminders", 
+      "iconLocation": "", 
+      "href": "exampleHref" 
+    }, 
+    { 
+      "linkName": "Highlights", 
+      "iconLocation": "", 
+      "href": "exampleHref" 
+    }, 
+    { 
+      "linkName": "Tasks", 
+      "iconLocation": "", 
+      "href": "exampleHref" 
+    }, 
+    { 
+      "linkName": "Activity", 
+      "iconLocation": "", 
+      "href": "exampleHref" 
+    }, 
+    { 
+      "linkName": "Search History", 
+      "iconLocation": "", 
+      "href": "exampleHref" 
+    }, 
+    { 
+      "linkName": "Finance", 
+      "iconLocation": "", 
+      "href": "exampleHref" 
+    }
+  ]
+}

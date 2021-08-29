@@ -1,0 +1,67 @@
+import React, { useState } from 'react';
+import LinkData from './LinkData.json';
+import Link from './Link';
+import './style.scss';
+import { CSSTransition } from 'react-transition-group';
+
+export default function SideNavigation() {
+  return (
+    <div className='SideNavigation_Container'>
+      <Account></Account>
+      <NavBar></NavBar>
+    </div>
+  );
+}
+
+function Account() {
+  return (
+    <div className='Logo_Wrapper'>
+      <img src='./images/other/Logo.svg' alt='logo' />
+    </div>
+  );
+}
+
+function NavBar() {
+  return (
+    <div className='Navigation_Wrapper'>
+      <Category></Category>
+      <Category></Category>
+    </div>
+  );
+}
+
+function Category() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className='Category'>
+      <div className='Title' onClick={() => setOpen(!open)}>
+        <input type='image' src='./images/chevron.svg' alt='chevron' />
+        <p>Quick Links</p>
+      </div>
+
+      <CSSTransition in={open === true} unmountOnExit timeout={200} classNames='my-node'>
+        <ul>
+          <NavItem linkName='bean'></NavItem>
+          <NavItem linkName='bean'></NavItem>
+          <NavItem linkName='bean'></NavItem>
+          <NavItem linkName='bean'></NavItem>
+        </ul>
+      </CSSTransition>
+    </div>
+  );
+}
+
+function NavItem(props) {
+  return (
+    <li className='nav-item'>
+      <a href=''>{props.linkName}</a>
+    </li>
+  );
+}
+
+{
+  /* {LinkData.QuickLinks.map((elem) => (
+        <Link linkName={elem.linkName} href={elem.href} iconLocation={elem.iconLocation} key={elem.linkName} />
+      ))} */
+}

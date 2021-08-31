@@ -1,5 +1,23 @@
 @import './base';
 
+.App {
+  display: flex;
+  min-width: 100vw;
+}
+
 .Column-1 {
-  background-color: $col-1-background;
+  background-color: #1d1d1d;
+  flex: 1;
+  max-width: 280px;
+}
+
+.Column-2 {
+  background-color: #282828;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.Column-3 {
+  background-color: #363636;
+  flex: 1;
 }

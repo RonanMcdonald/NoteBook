@@ -5,7 +5,7 @@
   min-width: 260px;
 
   // Border
-  border-right: $border;
+  // border-right: $border;
   overflow: hidden;
 }
 
@@ -26,118 +26,144 @@
   }
 }
 
+*,
+a {
+  font-size: 1.056rem;
+}
+
+p,
+a,
+h1 {
+  color: whitesmoke;
+}
+
 // Category
 .Category {
-  padding: 0 10px 15px 10px;
   position: relative;
-  border-top: 1px solid #292929;
 
   .Title {
     display: flex;
-    height: fit-content;
+    align-items: center;
+    text-transform: capitalize;
+    padding: 2.5px 10px;
 
-    margin: 4px 0 8px 0;
     cursor: pointer;
 
     p {
       font-family: $heading-font !important;
-      font-weight: 500;
       margin: 0;
     }
 
     // Chevron icon
-    input {
+    img {
       // Icon spacing from text
-      margin-right: 10px;
+      margin-right: 8px;
 
       // Icon size
-      width: 16px;
+      width: 14px;
       max-height: 100%;
+
+      // border: 1px solid red;
     }
+
+    .Children_Count {
+      flex: 1;
+      text-align: right;
+      opacity: 0.4;
+    }
+  }
+
+  .Top_Level_Title {
+    margin: 4px 0 0 0;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+  }
+}
+
+.Category_Border {
+  border-top: 1px solid #292929;
+}
+
+.Selected {
+  background-color: #a7a7a715;
+}
+
+.Nav_Item,
+.Title {
+  padding: 1.5px;
+  &:hover {
+    background-color: #a7a7a715;
+  }
+}
+
+.Nav_Item {
+  display: flex;
+  align-items: center;
+
+  img {
+    // Icon size
+    width: 14px;
+    max-height: 100%;
   }
 }
 
 // Navigation
 ul {
+  // padding: 0 5px;
   // List style
   list-style: none;
   padding: 0;
   margin: 0;
+  // border: 1px solid red;
 
   li {
     // margin: 5px;
-    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
   }
 
   a {
     display: flex;
-    padding: 3px 0;
     text-decoration: none;
-    color: white;
-    font-size: 16px;
-    border-radius: 5px;
 
     font-family: $body-font;
-    font-weight: 400;
-    cursor: pointer;
-
-    &:hover {
-      background-color: #8a78c550;
-    }
+    font-weight: 300;
   }
 
   img {
     width: 16px;
     height: 16px;
     margin-right: 10px;
+    box-sizing: border-box;
   }
 }
 
 // Tooltip
-.tooltip {
-  position: relative;
+// // .tooltip {
+// //   position: relative;
 
-  // Text
-  .tooltiptext {
-    visibility: hidden;
-    width: 80px;
-    background-color: rgb(0, 0, 0);
-    color: #fff;
-    text-align: center;
-    padding: 8px 0;
-    border-radius: 4px;
+// //   // Text
+// //   .tooltiptext {
+// //     visibility: hidden;
+// //     width: 80px;
+// //     background-color: rgb(0, 0, 0);
+// //     color: #fff;
+// //     text-align: center;
+// //     padding: 8px 0;
+// //     border-radius: 4px;
 
-    position: absolute;
-    left: 105%;
-    top: 50%;
-    transform: translate(0, -50%);
-    font-weight: 500;
-  }
+// //     position: absolute;
+// //     left: 105%;
+// //     top: 50%;
+// //     transform: translate(0, -50%);
+// //     font-weight: 500;
+// //   }
 
-  // On hover, make visable
-  &:hover .tooltiptext {
-    visibility: visible;
-  }
-}
-
-// .my-node-enter {
-//   max-height: 0;
-//   transition: max-height 0.15s ease-out;
-// }
-// .my-node-enter-active {
-//   max-height: 500px;
-//   transition: max-height 0.25s ease-in;
-// }
-
-// .my-node-exit {
-//   max-height: 0;
-//   transition: max-height 0.25s ease-out;
-// }
-
-// .my-node-exit-active {
-//   // max-height: 0;
-//   // transition: max-height 0.15s ease-out;
-// }
+// //   // On hover, make visable
+// //   &:hover .tooltiptext {
+// //     visibility: visible;
+// //   }
+// // }
 
 .active {
   max-height: 200px;
@@ -145,4 +171,10 @@ ul {
 
 .notActive {
   max-height: 0;
+}
+
+.rotate {
+  -moz-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }

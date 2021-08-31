@@ -1,5 +1,5 @@
 import SideNavigation from './components/SideNavigation/SideNavigation';
-import React from 'react';
+import React, { useState } from 'react';
 import './styles/app.scss';
 
 function App() {
@@ -17,11 +17,15 @@ function App() {
     ],
   };
 
+  const [currentView, setCurrentView] = useState('bean');
+
   return (
     <div className='App'>
       <div className='Column-1'>
-        <SideNavigation></SideNavigation>
+        <SideNavigation updateView={setCurrentView}></SideNavigation>
       </div>
+      <div className='Column-2'>col2</div>
+      <div className='Column-3'>{currentView}</div>
     </div>
   );
 }
